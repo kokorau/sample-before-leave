@@ -12,3 +12,19 @@ window.addEventListener(
   },
   { once: true },
 );
+
+const closeButton = document.getElementById("close-button");
+
+closeButton.addEventListener("click", () => {
+  popupBlocker.style.display = "none";
+});
+
+popupBlocker.addEventListener("click", (e) => {
+  popupBlocker.style.display = "none";
+});
+
+for (const node of popupBlocker.children) {
+  node.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+}
