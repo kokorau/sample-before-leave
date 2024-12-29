@@ -5,6 +5,7 @@ const root = resolve(__dirname, "src");
 const outDir = resolve(__dirname, "dist");
 
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? "REPOSITORY_NAME" : "./",
   root,
   build: {
     outDir,
