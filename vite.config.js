@@ -5,7 +5,7 @@ const root = resolve(__dirname, "src");
 const outDir = resolve(__dirname, "dist");
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? "sample-before-leave" : "./",
+  base: process.env.GITHUB_PAGES ? "sample-before-leave" : "aaaa",
   root,
   build: {
     outDir,
